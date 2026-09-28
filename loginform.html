@@ -12,10 +12,25 @@
         <label for="passwordInput">Password:</label><input type="password" id="passwordInput" />
         <p id="message"></p>
         <br /><br />
-        <a href="#">Log in</a>
+        <a href="#" onclick="verifyUser()">Log in</a>
     </form>
 
     <script>
+        function verifyUser() {
+            var username = document.getElemenById("usernameInput").value;
+            var password = document.getElemenById("passwordInput").value;
+
+            checkUserCreds(username, password);
+        }
+
+        funtion checkUserCreds(username, password){
+            var systemUsername = "Bond";
+            var systemPassword = "007";
+
+            if (username == systemUsername && password == systemPassword) {
+                document.getElemenById("message").innerHTML = "Correct. Logging you in...";
+            }
+        }
 
     </script>
 
